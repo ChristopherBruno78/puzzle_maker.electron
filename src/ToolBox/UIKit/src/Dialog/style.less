@@ -1,0 +1,221 @@
+@import url(../../Themes/theme);
+
+
+.tb-Dialog {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  min-height: 60px;
+  min-width: 60px;
+  z-index: @zIndex3;
+  color: #222;
+  background-color: transparent;
+  border-radius: 6px 6px 0 0;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  outline: 0;
+  overflow: visible;
+  box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  pointer-events: all;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+
+  transition: transform 0.2s cubic-bezier(0.465, 0.183, 0.153, 0.946),
+  opacity 0.15s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+}
+
+.tb-Dialog.tb-top-window {
+  z-index: @zIndex4;
+}
+
+.tb-Dialog > .tb-Dialog-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  background: @dialogBackgroundColor;
+  box-sizing: border-box;
+  border-top: none;
+  box-shadow: 0 0 0 0 rgba(16, 22, 26, .1), 0 4px 8px rgba(16, 22, 26, .2), 0 18px 46px 6px rgba(16, 22, 26, .2);
+}
+
+.tb-Dialog-titlebar {
+  padding: 0;
+  position: relative;
+  height: 42px;
+  max-height: 42px;
+  background-color: @dialogTitleBarBackgroundColor;
+  border-bottom: 1px solid @dialogBorderColor;
+  box-sizing: border-box;
+  text-align: left;
+  color: @dialogTitleBarForegroundColor;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: @textFontFamily;
+  overflow: visible !important;
+  border-radius: 7px 7px 0 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tb-Dialog-titlebar.tb-draggable {
+  cursor: move;
+}
+
+
+.tb-Dialog-title {
+  margin: 12px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+}
+
+.tb-Dialog-titlebar.tb-draggable .tb-Dialog-title {
+  cursor: move;
+}
+
+.tb-Dialog-tools {
+  float: right;
+  margin-top: 12px;
+  margin-right: 10px;
+}
+
+.tb-Dialog .tb-Button--iconOnly.tb-Dialog-toolBtn.default {
+  float: right;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 9px;
+  font-weight: bold;
+  transition: none;
+  background-color: transparent;
+  color: #fff;
+  margin-left: 12px;
+}
+
+.tb-Dialog .tb-Button--iconOnly.tb-Dialog-toolBtn.default .icon-font {
+  font-size: 11px;
+  line-height: 0;
+}
+
+.tb-Dialog .tb-Button > div > .icon-font {
+  font-size: unset;
+}
+
+.tb-Dialog .tb-Dialog-toolBtn.default.is-hover {
+  background-color: rgba(167, 182, 194, 0.3);
+}
+
+
+.tb-Dialog .tb-Button--iconOnly.tb-Dialog-toolBtn.default.tb-Dialog-close {
+  background: @dialogCloseButtonBackgroundColor;
+}
+
+
+.tb-Dialog .tb-Button--iconOnly.tb-Dialog-toolBtn.default.tb-Dialog-close.is-hover {
+  background-color: @dialogCloseButtonHoverBackgroundColor;
+
+}
+
+.tb-Dialog .tb-Button.tb-Button--iconOnly > div > .icon-font {
+  margin: 0;
+}
+
+.tb-Dialog .tb-Dialog-toolBtn.default.is-hover {
+  background-color: rgba(200, 200, 200, 0.3);
+}
+
+
+.tb-Dialog .tb-Dialog-toolBtn.default.is-disabled.is-hover {
+  background: none !important;
+}
+
+
+.tb-Dialog .tb-Dialog-toolBtn.default.is-active {
+  box-shadow: none;
+  background-color: rgba(137, 137, 137, 0.3);
+}
+
+.tb-Dialog .tb-Button--iconOnly.tb-Dialog-toolBtn.default.tb-Dialog-close.is-active {
+  background: @dialogCloseButtonActiveBackgroundColor;
+}
+
+
+.tb-Dialog .tb-Dialog-toolBtn .fa-window-minimize,
+.tb-Dialog .tb-Dialog-toolBtn .fa-window-maximize {
+  font-size: 14px;
+}
+
+.tb-Dialog-modalDimmer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  width: auto !important;
+  height: auto !important;
+  background-color: @dialogModalColor;
+  z-index: @zIndex2;
+  outline: none !important;
+  border: none !important;
+  overflow: auto;
+}
+
+.tb-Dialog.tb-Dialog-minimized {
+  display: none;
+}
+
+.tb-Dialog.drop {
+  transition: top 0.25s ease;
+}
+
+.tb-Dialog .msg-dialog {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 15px 15px 0 18px;
+  height: auto;
+  z-index: @zIndex4;
+}
+
+.tb-Dialog .msg-dialog label {
+  margin-top: 6px;
+  margin-left: 12px;
+  text-align: left;
+  display: flex;
+}
+
+.tb-Dialog .msg-icon {
+  font-size: 84px;
+  margin-right: 12px;
+  color: #444;
+}
+
+.tb-Dialog .msg-dialog .tb-Text {
+  margin: 12px 0 12px 12px;
+}
+
+.tb-Dialog .btns {
+  padding: 15px 15px 15px 15px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.tb-Dialog .btns .tb-Button {
+  width: 120px;
+  margin-left: 8px;
+}

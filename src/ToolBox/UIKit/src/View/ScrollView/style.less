@@ -1,0 +1,106 @@
+@import url(../../../Themes/theme);
+
+@media (pointer: fine) {
+
+  .tb-ScrollView {
+    overflow: hidden;
+  }
+
+  .tb-ScrollView .content > * {
+    position: absolute;
+    top: 0;
+  }
+
+  .tb-ScrollView .content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+}
+
+.tb-ScrollBar {
+  position: absolute;
+  background-color: @scrollBarBackgroundColor;
+  overflow: visible;
+  opacity: 1;
+}
+
+.tb-ScrollBar.tb-ScrollBar--vertical {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 14px;
+  transition: width 300ms ease, opacity 800ms ease;
+}
+
+
+.tb-ScrollBar.tb-ScrollBar--vertical.mini {
+  background-color: transparent;
+  opacity: 1;
+  width: 6px;
+}
+
+.tb-ScrollBar.mini.tb-hidden {
+  opacity: 0;
+  visibility: visible;
+}
+
+.tb-ScrollBar .thumb {
+  position: absolute;
+  background-color: @scrollBarThumbColor;
+  border-radius: 5px;
+
+}
+
+.tb-ScrollBar .thumb.is-active {
+  background-color: @scrollBarThumbActiveColor;
+  transition: none !important;
+}
+
+.tb-ScrollBar.tb-ScrollBar--vertical .thumb {
+  left: 4px;
+  right: 3px;
+  top: 2px;
+  transition: left 300ms ease, top 150ms ease;
+
+}
+
+.tb-ScrollBar.tb-ScrollBar--vertical.mini .thumb {
+  left: 0;
+  right: 3px;
+  background-color: @scrollBarThumbMiniColor;
+  opacity: 1;
+}
+
+.tb-ScrollBar.tb-ScrollBar--horizontal {
+  left: 0;
+  right: 1px;
+  bottom: 0;
+  height: 14px;
+  transition: height 300ms, opacity 400ms ease;
+}
+
+.tb-ScrollBar.tb-ScrollBar--horizontal .thumb {
+  top: 3px;
+  bottom: 3px;
+  left: 2px;
+  transition: top 400ms ease, left 150ms ease;
+}
+
+
+.tb-ScrollBar.tb-ScrollBar--horizontal.mini {
+  background-color: transparent;
+  height: 6px;
+}
+
+.tb-ScrollBar.tb-ScrollBar--horizontal.mini .thumb {
+  bottom: 3px;
+  top: 0;
+  background-color: @scrollBarThumbMiniColor;
+  opacity: 1;
+}
+
+

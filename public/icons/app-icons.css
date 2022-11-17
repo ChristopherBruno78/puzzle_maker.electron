@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "app-icons";
+    src: url("app-icons.woff2?e6fc3f1a6ae652fb16a126993c11d6ab") format("woff2");
+}
+
+i[class^="app-icon-"]:before, i[class*=" app-icon-"]:before {
+    font-family: app-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.app-icon-redo:before {
+    content: "\f101";
+}
+.app-icon-undo:before {
+    content: "\f102";
+}

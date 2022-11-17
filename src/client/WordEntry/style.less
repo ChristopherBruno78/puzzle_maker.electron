@@ -1,0 +1,103 @@
+@import url(../Themes/appTheme);
+
+.word-entry {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+}
+
+.word-entry .list {
+  flex: 1;
+  width: 100%;
+}
+
+.word-entry .emptyText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #9f9f9f;
+  font-size: 19px;
+}
+
+.word-entry .buttonBar {
+  height: 32px;
+  width: 100%;
+  background-color: @buttonBarBackgroundColor;
+  outline: 1px solid @buttonBarHoverColor;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  overflow: hidden;
+  align-items: center;
+}
+
+.word-entry .buttonBar .tb-Button.default {
+  border: none;
+  border-right: 1px solid @buttonBarHoverColor;
+  background: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 0;
+  margin: 0;
+}
+
+.word-entry .buttonBar .tb-Button.default.is-active,
+.word-entry .buttonBar .tb-Button.default.is-hover {
+  background-color: @buttonBarHoverColor;
+}
+
+.word-entry .buttonBar .tb-Button.default .icon-font {
+  font-size: 15px;
+  color: @buttonBarForegroundColor;
+}
+
+.word-entry .wordlist {
+  background-color: #fff;
+  height:100%;
+}
+
+.word-entry .wordlist-item {
+  width: 100%;
+  background-color: #fff;
+  padding: 5px;
+}
+
+.word-entry .wordlist-item.odd {
+  background-color: #f7f7fa;
+}
+
+.word-entry .wordlist-item.is-selected {
+  background-color: @menuItemActiveBackgroundColor;
+}
+
+.word-entry .wordlist-item td {
+  font-size: 14px;
+  user-select: none;
+  vertical-align: top;
+}
+
+.word-entry .break-word {
+  word-break: break-word;
+}
+
+.word-entry .wordlist-item.is-selected td {
+  color: #fff;
+}
+
+.word-entry .tb-Button {
+  margin-right:6px;
+}
+
+.word-entry .word-count {
+  margin-right: 8px;
+  color: @buttonBarForegroundColor;
+}
+
+.word-entry .word-count label {
+  font-size: 13px;
+}
+
+.word-entry .wordlist-item td.bold {
+  font-weight: bold;
+}

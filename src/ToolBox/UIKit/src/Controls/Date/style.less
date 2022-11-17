@@ -1,0 +1,188 @@
+@import url(../../../Themes/theme);
+
+
+.tb-Calendar {
+  background: #fff;
+  padding: 2px;
+  position: relative;
+  box-sizing: border-box;
+  width: 260px;
+  max-width: 260px;
+  outline: none !important;
+}
+
+.tb-Calendar-DayCell {
+  border: none;
+  display: table-cell;
+  background: none;
+  padding: 1px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  color: #444;
+  cursor: pointer;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+.tb-Calendar-DayCell:focus,
+.tb-Calendar-DayCell.is-hover {
+  background-color: #eee;
+  outline: none !important;
+}
+
+.tb-Calendar-DayLabel td {
+  font-size: 12px;
+  border: none;
+  color: #333;
+  font-weight: bold;
+  background: none;
+  margin: 1px;
+  padding: 1px;
+  height: 17px;
+  width: 30px;
+  text-align: center;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+}
+
+.tb-Calendar .tb-Month {
+  margin: 5px 0 0 0;
+  width: 255px;
+  box-sizing: border-box;
+}
+
+.tb-Calendar-DayCell.is-today,
+.tb-Calendar-DayCell.is-today.is-hover {
+  background: #FFFF99;
+}
+
+.tb-Calendar-DayCell label {
+  cursor: pointer;
+}
+
+.tb-Calendar-DayCell.is-disabled label {
+  cursor: default;
+}
+
+.tb-Calendar.is-disabled {
+  opacity: 0.8;
+}
+
+.tb-Calendar.is-disabled .tb-Calendar-DayCell,
+.tb-Calendar-DayCell.is-disabled,
+.tb-Calendar-DayCell.is-disabled.is-hover {
+  color: #aaa !important;
+  background-color: transparent !important;
+  cursor: default;
+}
+
+.tb-Calendar-DayCell.is-selected,
+.tb-Calendar-DayCell.is-selected:focus,
+.tb-Calendar-DayCell.is-selected.is-hover {
+  background: @selectionColor;
+  color: @selectionForegroundColor;
+}
+
+.tb-Calendar .tb-Calendar-Controls {
+  width: 255px;
+  padding: 8px 0 8px 24px;
+  border-bottom: 1px solid #dbdcdd;
+  box-sizing: border-box;
+  white-space: nowrap;
+  position: relative;
+}
+
+.tb-Calendar .tb-ComboBox {
+  width: 100px;
+  height: 24px;
+  display: inline-block;
+  margin: 0 2px 0 2px;
+  box-sizing: border-box;
+}
+
+.tb-Calendar .tb-ComboBox::after {
+  position: absolute;
+  top: 0;
+  right: 6px;
+  line-height: 23px;
+  color: #5c7080;
+  pointer-events: none;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.tb-Calendar .tb-ComboBox .tb-Combo-input {
+  font-size: 9pt;
+  height: 24px;
+  padding: 0 0 2px 6px;
+  font-family: @textFontFamily;
+}
+
+.tb-Calendar .tb-Button.default {
+  position: absolute;
+  width: 20px;
+  height: 23px;
+  top: 9px;
+  border-radius: 4px;
+  border: none;
+}
+
+.tb-Calendar .tb-Button.default .font-icon {
+  font-size: 19px;
+}
+
+.tb-Calendar .tb-Button.prevMonth {
+  left: 0;
+}
+
+.tb-Calendar .tb-Button.nextMonth {
+  right: 0;
+}
+
+.tb-Calendar .tb-Button .icon {
+  font-size: 12px;
+  top: 1px;
+}
+
+.tb-DatePicker-Calendar {
+  padding: 0;
+
+}
+
+.tb-DatePicker-Calendar .tb-Calendar {
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.tb-DatePicker {
+  position: relative;
+  border-right-color: @infoColorBorder;
+}
+
+.tb-DatePicker:focus,
+.tb-DatePicker.is-focused {
+  border: none;
+}
+
+.tb-DatePicker .tb-calendar-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 15px;
+  width: 32px;
+  height: 36px;
+  border-radius: 0 2px 2px 0;
+}
+
+.tb-DatePicker.is-focused .tb-date-icon {
+  top: -1px;
+  right: -2px;
+}

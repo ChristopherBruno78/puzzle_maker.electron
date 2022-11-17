@@ -1,0 +1,46 @@
+@import url(../../../Themes/theme);
+
+.tb-SplitDivider {
+  z-index: 10;
+  display: flex;
+  min-height: 1px;
+  min-width: 0;
+  background: none;
+  box-sizing: border-box;
+  touch-action: none;
+}
+
+
+.tb-SplitDivider .sash {
+  background: #bfbfbf;
+  border-radius: 50%;
+  position: absolute;
+
+}
+
+.tb-SplitView.tb-Split--column {
+  display: flex;
+  flex-direction: column;
+}
+
+.tb-SplitView.tb-Split--row {
+  display: flex;
+  flex-direction: row;
+}
+
+.tb-SplitView.tb-Split--row > .tb-SplitDivider {
+  cursor: ew-resize;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.tb-SplitView.tb-Split--column > .tb-SplitDivider {
+  cursor: ns-resize;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.tb-SplitDivider.static {
+  cursor: default !important;
+}

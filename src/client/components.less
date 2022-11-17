@@ -1,0 +1,58 @@
+/**
+Override theme colors here
+ */
+@import url(Themes/appTheme);
+
+.tb-MenuBar {
+  border-top: 1px solid @menuBarBorderColor;
+  background: @menuBarBackgroundColor;
+  border-color: @menuBarBorderColor;
+}
+
+.tb-MenuBar .tb-MenuButton.tb-MenuBar-item {
+  color: @menuBarForegroundColor;
+  text-shadow: 0 1px #f0f0f0;
+  font-size: 13px;
+}
+
+.tb-MenuBar .tb-MenuButton.tb-MenuBar-item.is-active {
+  background: @menuBarBorderColor;
+  color: @menuBarForegroundColor;
+}
+
+.tb-MenuBar-menu .tb-MenuItem.is-active,
+.tb-MenuItem.is-active {
+  background: @menuItemActiveBackgroundColor;
+  color: #fff;
+}
+
+.tb-SplitView.tb-Split--row > .tb-SplitDivider {
+  border-right:none;
+}
+
+/** Dialog **/
+.tb-Dialog-titlebar {
+  background-color: @dialogTitleBarBackgroundColor;
+  color: @dialogTitleBarForegroundColor;
+  border-color: @dialogTitleBarBorderColor;
+  font-weight: bold;
+  font-size: 15px;
+  text-shadow: 0 1px #fff;
+}
+
+.tb-Dialog-content {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px;
+}
+
+.tb-Toolbar {
+  background: #f6f6f6;
+}
+
+.tb-Toolbar-section > .tb-Button.default {
+  border-color: transparent;
+  width: 34px;
+  height: 34px;
+  background: #f6f6f6;
+}

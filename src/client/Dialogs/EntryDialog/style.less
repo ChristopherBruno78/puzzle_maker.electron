@@ -1,0 +1,67 @@
+.entry-dialog label {
+  font-size: 15px;
+}
+
+.entry-dialog .tb-Text {
+  width: 100%;
+  margin: 6px 0 10px 0;
+}
+
+.entry-dialog .tb-Text.multiline {
+  flex: 1;
+}
+
+.entry-dialog .buttonBar {
+  margin: 7px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.entry-dialog .buttonBar > label {
+  flex: 1;
+  font-size:13px;
+  color: #ff3311;
+  word-break: break-word;
+}
+
+.entry-dialog .buttonBar .tb-Button {
+  width: 90px;
+  height: 29px;
+  margin-left: 6px;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  6.5% {
+    transform: translateX(-6px) rotateY(-9deg);
+  }
+
+  18.5% {
+    transform: translateX(5px) rotateY(7deg);
+  }
+
+  31.5% {
+    transform: translateX(-3px) rotateY(-5deg);
+  }
+
+  43.5% {
+    transform: translateX(2px) rotateY(3deg);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+}
+.shake {
+  animation-name: shake;
+  animation-duration: 800ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+

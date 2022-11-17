@@ -1,0 +1,180 @@
+@import url(../../Themes/theme);
+
+
+.tb-Toast-container {
+  position: fixed;
+  z-index: @zIndex4;
+  padding: 0 15px 15px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+
+}
+
+.tb-Toast-container > span {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.tb-Toast-container.top {
+  top: 0;
+}
+
+.tb-Toast-container.bottom {
+  bottom: 0;
+}
+
+.tb-Toast-container.left {
+  left: 0;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+
+.tb-Toast-container.right {
+  right: 0;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+
+}
+
+.tb-Toast-container.left.right {
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.tb-Toast {
+  position: relative !important;
+  min-width: 50px;
+  min-height: 32px;
+  max-width: 500px;
+  margin: 10px auto;
+  border-radius: 4px;
+  border: 1px solid @defaultColorBorder;
+  background-color: @defaultColor;
+  pointer-events: all;
+  opacity: 0.94;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  padding: 5px;
+  box-shadow: @popOverBoxShadow;
+}
+
+.tb-Toast:focus {
+  outline: none;
+}
+
+.tb-Toast.tb-Toast-enter {
+  transform: translateY(-60px);
+}
+
+.tb-Toast.tb-Toast-appear {
+  transform: translateY(0px);
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.54, 1.12, 0.38, 1.11);
+  transition-delay: 0ms;
+}
+
+.tb-Toast-container.bottom > span > .tb-Toast.tb-Toast-enter {
+  transform: translateY(60px);
+
+}
+
+.tb-Toast.tb-Toast-exit {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 500ms;
+  pointer-events: none;
+}
+
+.tb-Toast > .icon {
+  width: 22px;
+  font-size: 19px;
+  margin: 9px 0 0 6px;
+  box-sizing: border-box;
+}
+
+.tb-Toast.tb-Toast--hasIcon > .icon {
+  display: block;
+}
+
+.tb-Toast > .tb-Toast-content {
+  text-align: left;
+  min-height: 36px;
+  max-width: 350px;
+  color: #182026;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  word-wrap: normal;
+}
+
+.tb-Toast-content > .message {
+  margin: 4px 12px 4px 4px;
+  width: auto;
+  flex-grow: 1;
+}
+
+
+.tb-Toast > .tb-Button.close {
+  margin-top: 3px;
+  height: 30px;
+  font-size: 21px;
+  border: none;
+  width: 30px;
+}
+
+
+.tb-Toast.intent,
+.tb-Toast.intent > .tb-Toast-content {
+  color: #fff;
+}
+
+.tb-Toast.intent > .content {
+  color: #fff;
+}
+
+.tb-Toast.primary {
+  background-color: @primaryColor;
+  border: none;
+}
+
+.tb-Toast.success {
+  background-color: @successColor;
+  border: none;
+}
+
+.tb-Toast.warning {
+  background-color: @warningColor;
+  border: none;
+}
+
+.tb-Toast.danger {
+  background-color: @dangerColor;
+  border: 1px solid @dangerColorBorder;
+}
+
+.tb-Toast.info {
+  background-color: @infoColor;
+  border: none;
+}
+
+.tb-Toast.inverse {
+  background-color: @inverseColor;
+  border: none;
+}
+
+.tb-Toast.inverse.tb-Toast-exit {
+  opacity: 0;
+}

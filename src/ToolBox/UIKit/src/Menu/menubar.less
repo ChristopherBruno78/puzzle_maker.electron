@@ -1,0 +1,90 @@
+@import url(../../Themes/theme);
+
+.tb-MenuBar {
+  background: @menuBarBackgroundColor;
+  height: 28px;
+  width: 100%;
+  border-bottom: 1px solid @menuBarBorderColor;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: visible;
+  padding-left: 5px;
+}
+
+.tb-MenuBar .tb-MenuButton.tb-MenuBar-item {
+  color: @menuBarForegroundColor;
+  height: 28px;
+  cursor: default;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: bold;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+
+.tb-MenuBar .tb-MenuButton.tb-MenuBar-item.is-hover {
+  background: @menuBarItemHoverBackgroundColor;
+  color: @menuBarItemHoverForegroundColor;
+  box-shadow: none;
+}
+
+.tb-MenuBar .tb-MenuButton.tb-MenuBar-item.is-active.is-hover,
+.tb-MenuBar .tb-MenuButton.tb-MenuBar-item.is-active {
+  background: @menuBarItemActiveBackgroundColor;
+  color: @menuBarItemActiveForegroundColor;
+  box-shadow: none;
+}
+
+.tb-MenuBar .tb-MenuButton.tb-MenuBar-item .indicator {
+  position: absolute;
+  height: 3px;
+  background: @menuBarIndicatorColor;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+.tb-MenuBar .tb-MenuButton.tb-MenuBar-item.is-active .indicator {
+  display: block
+}
+
+.tb-MenuBar .tb-MenuButton.tb-MenuBar-item label {
+  margin-top: 1px;
+  font-size: 13px;
+}
+
+
+.tb-MenuBar .tb-MenuButton.tb-MenuBar-item .font-icon {
+  display: none;
+}
+
+.tb-Menu.tb-PopOver.tb-MenuBar-menu {
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+}
+
+.tb-Menu.tb-MenuBar-menu {
+  background: @menuBarMenuBackgroundColor;
+  color: @menuBarMenuForegroundColor;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0.98;
+}
+
+.tb-MenuBar-menu .tb-MenuItem {
+  color: @menuBarMenuForegroundColor;
+}
+
+.tb-MenuBar-menu .tb-MenuItem.is-active {
+  background: @menuBarActiveMenuItemBackgroundColor;
+  border-color: @menuBarActiveMenuItemBackgroundColor;
+  color: @menuBarActiveMenuItemForegroundColor;
+}

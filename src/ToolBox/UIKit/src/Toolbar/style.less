@@ -1,0 +1,156 @@
+@import url(../../Themes/theme);
+
+.tb-Toolbar {
+  height: 45px;
+  background-color: @toolbarBackgroundColor;
+  border-bottom: 1px solid @toolbarBorderColor;
+  color: @toolbarForegroundColor;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: @toolbarBoxShadow;
+}
+
+.tb-Toolbar-section {
+  position: absolute;
+  height: 45px;
+  line-height: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tb-Toolbar-section.tb-Toolbar-section--left {
+  left: 6px;
+}
+
+.tb-Toolbar-section.tb-Toolbar-section--right {
+  right: 6px;
+}
+
+.tb-Toolbar-section > * {
+  display: inline-block;
+  position: relative !important;
+}
+
+.tb-Toolbar-section > .tb-Button.default {
+  border: 1px solid @toolbarButtonBorderColor;
+  border-radius: 3px;
+  height: 32px;
+  background-color: @toolbarButtonBackgroundColor;
+  color: @toolbarForegroundColor;
+  text-shadow: none;
+  line-height: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0 2px 0 2px;
+}
+
+.tb-Toolbar-section > .tb-Button > div > .label {
+  font-weight: normal;
+}
+
+.tb-Toolbar-section > .tb-Button.tb-Button--iconOnly {
+  min-width: 32px;
+}
+
+.tb-Toolbar-section > .tb-Button.default.is-hover {
+  background-color: @toolbarButtonHoverColor;
+  color: @toolbarButtonActiveForegroundColor;
+}
+
+.tb-Toolbar-section > .tb-Button.default.is-active {
+  background-color: @toolbarButtonActiveColor;
+  color: @toolbarButtonActiveForegroundColor;
+  box-shadow: none;
+}
+
+.tb-Toolbar-section > .tb-ComboBox {
+  border-color: @toolbarButtonBorderColor;
+  border-radius: 3px;
+  background-color: @toolbarButtonBackgroundColor;
+  background-image: none;
+}
+
+
+.tb-Toolbar-section > .tb-ComboBox.is-hover {
+  background-image: none;
+  background-color: @toolbarButtonHoverColor;
+}
+
+.tb-Toolbar-section > .tb-ComboBox select {
+  border-radius: 3px;
+  color: #fafafa;
+}
+
+.tb-Toolbar-section > .tb-ComboBox select option {
+  color: #111;
+}
+
+.tb-Toolbar-section > .tb-ComboBox::after {
+  color: @toolbarForegroundColor;
+}
+
+.tb-Toolbar-section > .hidden {
+  display: none !important;
+}
+
+.tb-Toolbar-section .is-disabled {
+  opacity: 0.92;
+}
+
+.tb-Toolbar-section > .tb-Button.is-disabled.is-hover {
+  background: transparent;
+}
+
+.tb-Toolbar-section .tb-MenuButton i.chevron {
+  color: @toolbarForegroundColor;
+  top: 5px;
+}
+
+.tb-Toolbar-section > .tb-Text {
+  margin: 0 3px 0 3px;
+  height: 32px;
+  border-color: @toolbarBorderColor;
+  border-radius: 2px;
+  box-sizing: border-box;
+  vertical-align: top;
+  display: flex !important;
+}
+
+.tb-Toolbar-section > .tb-Label {
+  color: @toolbarForegroundColor;
+  margin: 0 3px 0 3px;
+}
+
+.tb-Toolbar-section > .tb-Text.is-focused {
+  border-color: @focusRingColor;
+}
+
+.tb-Toolbar-section > .tb-Text.is-focused .tb-Text-input {
+  border-color: transparent;
+}
+
+.tb-Toolbar-section > .tb-Slider {
+  margin: 12px 2px 0 3px;
+  position: relative;
+  background-color: @toolbarButtonBorderColor;
+}
+
+.tb-Toolbar-section > .tb-Slider .tb-Slider-range {
+  background-color: #3186be;
+}
+
+.tb-Toolbar-divider {
+  display: inline !important;
+  height: 32px;
+  width: 1px;
+  padding: 3px 0 6px 0;
+  margin: 0 8px 0 6px;
+  border-left: 1px solid @toolbarDividerColor;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

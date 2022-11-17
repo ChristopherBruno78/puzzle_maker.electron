@@ -1,0 +1,115 @@
+@import url(../../../Themes/theme);
+
+
+.tb-Slider {
+  display: block;
+  text-align: left;
+  background: @sliderProgressBackgroundColor;
+  overflow: visible;
+  border: none;
+  font-weight: normal;
+  font-size: 16px;
+  padding: 0;
+  border-radius: 3px;
+  touch-action: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.tb-Slider.is-disabled {
+  opacity: 0.6;
+}
+
+
+.tb-Slider--vertical {
+  width: 5px;
+  min-width: 5px;
+  max-width: 5px;
+
+}
+
+.tb-Slider--horizontal {
+  height: 5px;
+  min-height: 5px;
+  max-height: 5px;
+}
+
+.tb-Slider-handle {
+  position: absolute;
+  display: block;
+  z-index: 5;
+  cursor: default;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #9aa6af;
+  background: @defaultColor;
+  border-radius: 50%;
+  padding: 0;
+  touch-action: none;
+  user-select: none;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+.tb-Slider-handle.is-active {
+  background: @defaultColorHover;
+}
+
+.tb-Slider--vertical .tb-Slider-handle {
+  left: -7px;
+  margin-top: -13px;
+  top: 10px;
+}
+
+.tb-Slider--horizontal .tb-Slider-handle {
+  top: -7px;
+  margin-left: -13px;
+  left: 10px;
+}
+
+.tb-Slider-range {
+
+  background: @sliderProgressForegroundColor;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)) left no-repeat, center no-repeat @sliderProgressForegroundColor;
+  border: none;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 3px;
+
+
+}
+
+.tb-Slider--vertical .tb-Slider-range {
+  width: 6px;
+  min-width: 6px;
+  max-width: 6px;
+  height: 0;
+  bottom: -1px;
+}
+
+.tb-Slider--horizontal .tb-Slider-range {
+
+  height: 6px;
+  min-height: 6px;
+  max-height: 6px;
+  width: 0;
+  top: -1px;
+
+}
+
+.tb-PopOver.tb-Slider-tip {
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 6px 6px;
+  height: 28px;
+  min-width: 30px;
+  font-size: 13px;
+  text-align: center;
+  background: rgb(26, 41, 55) !important;
+  box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 2px 4px rgba(16, 22, 26, 0.2), 0 8px 24px rgba(16, 22, 26, 0.2);
+  border-color: rgb(26, 41, 55);
+  color: #e8e9ea;
+}

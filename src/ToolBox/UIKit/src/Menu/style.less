@@ -1,0 +1,129 @@
+@import url(../../Themes/theme);
+
+.tb-Menu {
+  background: @menuBackgroundColor;
+  z-index: @zIndex1;
+  padding: 7px 0;
+  min-width: 160px;
+  font-size: 14px;
+  line-height: 12px;
+  display: block;
+  margin: 0;
+}
+
+.tb-Menu ul.tb-PopOver-content {
+  list-style: none;
+  line-height: 12px;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.tb-MenuItem {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  outline: none;
+  padding: 0;
+  min-height: 24px;
+  color: @menuForegroundColor;
+  box-sizing: border-box;
+  position: relative;
+  width: calc(100% + 0.5px);
+}
+
+.tb-MenuItem.is-active {
+  background-color: @menuItemActiveBackgroundColor;
+  border-color: @menuItemActiveBackgroundColor;
+  z-index: 1;
+  color: @menuItemActiveForegroundColor;
+}
+
+.tb-MenuItem.is-disabled.is-active {
+  background: none;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  color: @menuForegroundColor;
+}
+
+.tb-MenuItem.is-disabled {
+  opacity: 0.5;
+}
+
+.tb-MenuItem.is-disabled.is-selected,
+.tb-MenuItem.is-disabled.is-active,
+.tb-MenuItem.is-disabled.is-active.is-selected {
+  background-color: transparent;
+}
+
+.tb-MenuItem > .icon-font {
+  font-size: 16px;
+  color: @menuIconColor;
+  min-width: 20px;
+  margin-left: 10px;
+  font-weight: 900;
+}
+
+.tb-MenuItem.is-active > .icon-font {
+  color: @menuItemActiveForegroundColor;
+}
+
+
+.tb-MenuItem.tb-MenuItem--noIcon label {
+  margin-left: 36px;
+  white-space: nowrap;
+}
+
+.tb-MenuItem > label {
+  box-sizing: border-box;
+  display: inline-block;
+  cursor: default;
+  flex: 1;
+  margin-right: 24px;
+  margin-left: 6px;
+  line-height: 24px;
+}
+
+.tb-MenuItem > .icon-font.chevron-right {
+  width: 32px;
+  height: 18px;
+  text-align: center;
+  font-size: 18px;
+  left: unset;
+  font-weight: 900;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: @menuIconColor;
+  pointer-events: none;
+}
+
+.tb-MenuItem.is-active > .icon-font.chevron-right {
+  color: @menuItemActiveForegroundColor;
+}
+
+.tb-MenuItem .shortcut {
+  margin-right: 8px;
+}
+
+.tb-Menu-filter {
+  margin: 0 3px 3px 3px;
+}
+
+
+.tb-Menu.tb-PopOver.is-submenu .tb-PopOver-callout {
+  display: none;
+}
+
+.tb-Menu.tb-PopOver .tb-ScrollView {
+  flex: 1;
+  height: auto !important;
+}
+
+.tb-Menu-Separator {
+  height: 1px;
+  box-sizing: border-box;
+  background-color: #d0d0d0;
+  margin: 6px;
+}

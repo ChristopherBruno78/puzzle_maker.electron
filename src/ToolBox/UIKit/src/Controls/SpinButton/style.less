@@ -1,0 +1,85 @@
+@import url(../../../Themes/theme);
+
+
+.tb-SpinButton {
+  box-sizing: border-box;
+  width: 100px;
+  border: 1px solid @defaultColorBorder;
+  border-radius: 3px;
+}
+
+.tb-SpinButton > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+
+.tb-SpinButton .tb-Text {
+  width: 50px;
+  height: 28px;
+  border-color: transparent;
+  box-shadow: none;
+  border-radius: 3px;
+  flex: 1;
+}
+
+.tb-SpinButton .tb-Text.is-focused input,
+.tb-SpinButton .tb-Text.is-focused {
+  outline: none;
+  border-color: transparent;
+}
+
+.tb-SpinButton.is-invalid {
+  outline: 0.2rem solid #FC343B;
+}
+
+
+.tb-SpinButton .tb-Text .tb-Text-input {
+  box-shadow: none;
+  border: none;
+  background-color: #fff;
+  font-size: 14px;
+  text-align: left;
+}
+
+.tb-SpinButton-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+}
+
+
+.tb-SpinButton-btns .tb-Button.default {
+  height: 100%;
+  min-height: 16px;
+  width: 30px;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.tb-SpinButton-btns .tb-Button.default .icon-font {
+  font-size: 14px;
+  color: @controlSelectedForegroundColor;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.tb-SpinButton.is-disabled .tb-SpinButton-btns .tb-Button.default .icon-font {
+  color: #888;
+}
+
+.tb-SpinButton-btns .tb-Button.down {
+  border-radius: 0;
+
+}
+
+.tb-SpinButton-btns .tb-Button.up {
+  border-radius: 0 3px 3px 0;
+}

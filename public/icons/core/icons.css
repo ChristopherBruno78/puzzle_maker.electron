@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "icons";
+    src: url("icons.woff2") format("woff2");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-angle-down-regular:before {
+    content: "\f101";
+}
+.icon-angle-left-regular:before {
+    content: "\f102";
+}
+.icon-angle-right-regular:before {
+    content: "\f103";
+}
+.icon-angle-up-regular:before {
+    content: "\f104";
+}
+.icon-backspace-solid:before {
+    content: "\f105";
+}
+.icon-bars-solid:before {
+    content: "\f106";
+}
+.icon-calendar-alt-solid:before {
+    content: "\f107";
+}
+.icon-check-solid:before {
+    content: "\f108";
+}
+.icon-minus-solid:before {
+    content: "\f109";
+}
+.icon-plus-solid:before {
+    content: "\f10a";
+}
+.icon-search-solid:before {
+    content: "\f10b";
+}
+.icon-times-solid:before {
+    content: "\f10c";
+}

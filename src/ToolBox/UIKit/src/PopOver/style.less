@@ -1,0 +1,152 @@
+@import url(../../Themes/theme);
+
+.tb-PopOver {
+  z-index: @zIndex5;
+  border-radius: 5px;
+  box-shadow: @popOverBoxShadow;
+  position: fixed !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  background: #fff;
+  border: 1px solid @popOverBorderColor;
+  display: block;
+  padding: 12px;
+}
+
+.tb-PopOver.tb-hidden {
+  pointer-events: none;
+}
+
+.tb-PopOver:focus {
+  outline: none;
+  border-color: @popOverBorderColor;
+}
+
+.tb-PopOver > .tb-PopOver-content {
+  width: auto;
+  height: auto;
+}
+
+.tb-PopOver-triangle-none,
+.tb-PopOver-callout-none {
+  display: none;
+}
+
+.tb-PopOver.closed {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tb-PopOver.fadeOut {
+  opacity: 0;
+}
+
+.tb-PopOver-callout {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  display: block;
+}
+
+.tb-PopOver-callout--t {
+  top: 100%;
+  margin-top: -4px;
+}
+
+.tb-PopOver-callout--r {
+  right: 100%;
+  margin-right: -5px;
+}
+
+.tb-PopOver-callout--b {
+  bottom: 100%;
+  margin-bottom: -5px;
+}
+
+.tb-PopOver-callout--l {
+  left: 100%;
+  margin-left: -5px;
+}
+
+.tb-PopOver-callout--left {
+  left: 10px;
+}
+
+.tb-PopOver-callout--center {
+  left: 50%;
+  margin-left: -6px;
+}
+
+.tb-PopOver-callout--right {
+  right: 10px;
+}
+
+.tb-PopOver-callout--top {
+  top: 10px;
+}
+
+.tb-PopOver-callout--middle {
+  top: 50%;
+  margin-top: -6px;
+}
+
+.tb-PopOver-callout--bottom {
+  bottom: 10px;
+}
+
+.tb-PopOver-triangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background: none;
+  z-index: @zIndex5;
+  border-style: solid;
+  border-color: @popOverCalloutBorderColor;
+  border-width: 1px 1px 0 0;
+  background: #fff;
+}
+
+.tb-PopOver-triangle--t {
+  transform: rotate(135deg);
+  top: -1.5px;
+}
+
+.tb-PopOver-triangle--r {
+  transform: rotate(-135deg);
+}
+
+.tb-PopOver-triangle--b {
+  transform: rotate(-45deg);
+}
+
+.tb-PopOver-triangle--l {
+  transform: rotate(45deg);
+  left: -1px;
+}
+
+.tb-Tooltip {
+  background: #232e3c !important;
+  box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 2px 4px rgba(16, 22, 26, 0.2),
+  0 8px 24px rgba(16, 22, 26, 0.2);
+  border-color: #232e3c;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 7px;
+  text-align: center;
+  white-space: nowrap;
+  min-width: 80px;
+  border-radius: 3px;
+  opacity: 0.94;
+}
+
+.tb-Tooltip .tb-PopOver-triangle {
+  border: none;
+  background: #232e3c !important;
+}

@@ -1,0 +1,211 @@
+@import url(../../../Themes/theme);
+
+.tb-Dialog.tb-ColorPanel .tb-Dialog-content {
+  padding: 14px;
+  font-size: 13px;
+}
+
+.tb-ColorPanel .presets {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+}
+
+.tb-ColorPanel .presets .tb-color-col {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4px;
+}
+
+.tb-Button.tb-ColorButton {
+  padding: 0;
+  margin-bottom: 4px;
+  width: 40px;
+  height: 28px;
+}
+
+.tb-Button.tb-ColorButton.default {
+  border: 1px solid transparent;
+  box-shadow: none;
+  border-radius: 0;
+  color: #000;
+}
+
+.tb-Button.tb-ColorButton.default.is-hover {
+  filter: opacity(75%);
+  border-width: 2px
+}
+
+.tb-Button.tb-ColorButton.default.is-dark {
+  color: #fff;
+}
+
+.tb-ColorPanel .presets .tb-color-col button:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.tb-ColorPanel .presets .tb-color-col button:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+
+.tb-ColorPanel .custom {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+}
+
+.tb-ColorPanel .custom .tb-Button {
+  margin-right: 4px;
+  width: 40px;
+  height: 28px;
+}
+
+.tb-ColorPanel .bbar {
+  margin: 4px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.tb-ColorPanel .bbar .stretch {
+  flex: 1;
+}
+
+.tb-ColorPicker {
+  display: flex;
+  flex-direction: row;
+}
+
+.tb-ColorSliders {
+  position: relative;
+  width: 230px;
+  height: 230px;
+}
+
+.tb-ColorSliders .tb-Slider.picker_hue {
+  height: 20px;
+  max-height: 20px;
+  border: none;
+  background-image: linear-gradient(90deg, red, yellow, lime, cyan, blue, magenta, red)
+}
+
+.tb-ColorSliders .tb-Slider.picker_alpha {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  bottom: 15px;
+  width: 20px;
+  max-width: 20px;
+  height: 200px;
+  border: none;
+
+}
+
+.tb-ColorSliders .picker_hue .tb-Slider-handle {
+  top: -0.1em;
+}
+
+.tb-ColorSliders .picker_alpha .tb-Slider-handle {
+  left: -0.1em;
+  background: transparent;
+}
+
+.tb-ColorSliders .tb-Slider-handle {
+  border-radius: 3px;
+  border: 3px solid #fff;
+  height: 24px;
+  width: 24px;
+
+}
+
+.tb-ColorSliders .tb-Slider-handle {
+  box-shadow: 0 0 0 1px @defaultColorBorder;
+}
+
+.tb-ColorSliders .tb-Slider-handle:focus {
+  box-shadow: none;
+}
+
+
+.tb-ColorSliders .tb-Slider-range {
+  display: none;
+}
+
+.tb-ColorSliders .sl_picker {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid @defaultColorBorder;
+  background-image: linear-gradient(180deg, white, rgba(255, 255, 255, 0) 50%), linear-gradient(0deg, black, rgba(0, 0, 0, 0) 50%), linear-gradient(90deg, gray, rgba(128, 128, 128, 0));
+}
+
+.tb-ColorSliders .sl_picker .sl_picker_vline {
+  width: 2px;
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-left: 1px solid #000;
+}
+
+.tb-ColorSliders .sl_picker .sl_picker_hline {
+  height: 2px;
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-top: 1px solid #000;
+}
+
+.tb-ColorPicker .tb-ColorValue {
+  flex: 1;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tb-ColorPicker .tb-ColorValue > label {
+  margin-bottom: 4px;
+  font-size: 13px;
+  display: block;
+}
+
+.tb-ColorPicker .tb-ColorValue .tb-Button {
+  width: 100%;
+  height: 33px;
+}
+
+.tb-ColorPicker .color_display {
+  width: 100%;
+  height: 41px;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 8px;
+  border: 1px solid #bbb;
+  background: linear-gradient(45deg, lightgrey 25%, transparent 25%, transparent 75%, lightgrey 75%) 0 0 / 20px 20px, linear-gradient(45deg, lightgrey 25%, white 25%, white 75%, lightgrey 75%) 10px 10px / 20px 20px;
+}
+
+.tb-ColorPicker .color_display > div {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  right: -1px;
+  left: -1px;
+}
+
+.tb-Button.default.tb-ColorWell {
+  padding: 3px;
+  width: 40px;
+  height: 28px;
+
+}
+
+.tb-Button.default.tb-ColorWell .tb-ColorWell--color {
+  border: 1px solid transparent;
+}
